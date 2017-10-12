@@ -36,7 +36,7 @@
 
     <mvc:default-servlet-handler/>
     <!-- 扫包 -->
-    <context:component-scan base-package="com.book.api*"></context:component-scan>
+    <context:component-scan base-package="com.book*"></context:component-scan>
     <!-- 静态资源过滤 -->
     <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
     <mvc:resources location="/WEB-INF/images/" mapping="/images/**"/>
