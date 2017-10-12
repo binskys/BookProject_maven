@@ -6,4 +6,7 @@
     <select id="queryByAccount" parameterType="string" resultType="com.book.api.model.User">
         select * from tab_user where account = #{id}
     </select>
+    <select id="queryByUser" parameterType="string" resultType="com.book.api.model.UserBean">
+        select * from tab_user
+    </select>
 </mapper>
