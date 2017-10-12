@@ -2,8 +2,12 @@ package com.book.api.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * get请求控制器
+ */
 @Controller
-public class HomeController extends BaseController {
+public class GetController extends BaseController {
     /**
      * 直接访问home页
      * @return

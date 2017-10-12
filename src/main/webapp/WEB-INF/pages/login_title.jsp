@@ -8,10 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>首页</title>
+    <title>登录成功</title>
 </head>
 
 <body>
-你好，这里是首页
+登录成功
 </body>
+
+<script>
+    window.location.href = 'http://192.168.20.171:8080/api/home';
+</script>
 </html>

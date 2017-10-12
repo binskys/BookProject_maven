@@ -40,7 +40,7 @@ public class LoginController extends BaseController {
             return "login";
         }
 
-        return "home";
+        return "login_title";
     }
 
 }
