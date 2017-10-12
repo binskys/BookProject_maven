@@ -11,11 +11,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@RequestMapping("/user")
-public class UserController extends BaseController {
+@RequestMapping("/api/user")
+public class LoginController extends BaseController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 登录
+     * @param request
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "login", method = RequestMethod.POST)
     private String login(HttpServletRequest request, Model model) {
         String userName = request.getParameter("account");

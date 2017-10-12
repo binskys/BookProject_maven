@@ -7,7 +7,7 @@
 <body>
 <%--http://localhost:8081/--%>
 <div id="div_login" class="div_login_css">
-    <form action="/user/login" id="from_login" method="post">
+    <form action="/api/user/login" id="from_login" method="post">
         用户名：<input type="text" name="account" id="account"/>
         <dr/>
         密码：<input type="password" name="passWord" id="pwd"/><br/>

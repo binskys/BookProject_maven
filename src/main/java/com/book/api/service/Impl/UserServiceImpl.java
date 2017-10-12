@@ -6,7 +6,7 @@ import com.book.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("UserServiceImpl")
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao user;
@@ -17,8 +17,8 @@ public class UserServiceImpl implements UserService {
         user2.setAccount("18170465691");
         user2.setPassword("a123456");
 
-        return user2;
-       // return user.queryByAccount(account);
+       // return user2;
+        return user.queryByAccount(account);
 
     }
 }

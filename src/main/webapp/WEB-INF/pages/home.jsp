@@ -8,12 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>登录成功</title>
 </head>
-<script>
-    alert("登录陈宫")
-</script>
-<body>
 
+<body>
+登录成功
 </body>
 </html>
