@@ -8,6 +8,7 @@
 <div>
     <button type="submit" onclick="toLogin()">登录</button>
     <button type="submit" onclick="getUserInfo()">查询用户信息</button>
+    <button type="submit" onclick="getUserList()">查询所有用户</button>
 </div>
 </body>
 <script>
@@ -16,6 +17,9 @@
     }
     function getUserInfo() {
         window.location.href='http://192.168.20.171:8080/api/user/info';
+    }
+    function getUserList() {
+        window.location.href='http://192.168.20.171:8080/api/user/list';
     }
 </script>
 </html>

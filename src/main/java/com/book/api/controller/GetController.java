@@ -1,18 +1,9 @@
 package com.book.api.controller;
 
-import com.book.api.model.User;
-import com.book.api.model.UserBean;
 import com.book.api.service.UserService;
-import com.book.api.utils.ApiReturn;
-import com.book.api.utils.ApiStrUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * get请求控制器
@@ -48,8 +39,18 @@ public class GetController extends BaseController {
      * @return
      */
     @RequestMapping("api/user/info")
-    private String userInfo(){
+    private String getUserInfo(){
         return "user_info";
+
+    }
+    /**
+     * 直接访问用户列表
+     *
+     * @return
+     */
+    @RequestMapping("api/user/list")
+    private String getUserList(){
+        return "user_list";
 
     }
 

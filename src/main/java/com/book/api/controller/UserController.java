@@ -50,13 +50,13 @@ public class UserController extends BaseController {
     }
 
     /**
-     * 直接用户信息
+     * 查询用户信息
      *
      * @return
      */
     @RequestMapping(value = "info", method = RequestMethod.POST)
     @ResponseBody
-    private ApiReturn userInfo(HttpServletRequest request, Model model) {
+    private ApiReturn getUserInfo(HttpServletRequest request, Model model) {
         try {
             String userName = request.getParameter("account");
             if (ApiStrUtils.isEmpty(userName)) {
@@ -72,6 +72,28 @@ public class UserController extends BaseController {
             map.put("address", user.getAddress());
             map.put("age", user.getAge());
             map.put("email", user.getEmail());
+            //存入session
+            return new ApiReturn(200, "查询成功", true, map);
+        } catch (Exception e) {
+            return new ApiReturn(500, "查询失败", false);
+        }
+    }
+    /**
+     * 查询用户列表
+     *
+     * @return
+     */
+    @RequestMapping(value = "list", method = RequestMethod.GET)
+    @ResponseBody
+    private ApiReturn getUserList(HttpServletRequest request, Model model) {
+        try {
+
+            Map<String, String> map = new HashMap<String, String>();
+//            map.put("UserId", user.getUser_id());
+//            map.put("name", user.getAccount());
+//            map.put("address", user.getAddress());
+//            map.put("age", user.getAge());
+//            map.put("email", user.getEmail());
             //存入session
             return new ApiReturn(200, "查询成功", true, map);
         } catch (Exception e) {
